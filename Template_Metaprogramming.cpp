@@ -4,7 +4,8 @@ using namespace std;
 
 
 template < int N>
-struct absol{
+
+struct absolute{
 	static_assert(N != INT_MIN);
 	static constexpr int value = (N < 0) ? -N : N;
 };
@@ -12,7 +13,7 @@ struct absol{
 int main()
 {
 	const int n = -15;
-	std::cout <<(absol<n>::value)<< std::endl;
+	std::cout <<(absolute<n>::value)<< std::endl;
 	cin.get();
 	return 0;
 
